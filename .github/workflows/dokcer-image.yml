@@ -7,7 +7,7 @@ on:
 env:
   APP_NAME: domi-bot
   APP_DIR: /opt/docker/domi-bot
-  APP_PORT: 5539
+  APP_PORT: 5533
 
 jobs:
   deploy:
