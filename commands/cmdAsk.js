@@ -30,6 +30,7 @@ module.exports = {
       ? `${aiApiUrl}webhook/domi-bot-ask`
       : `${aiApiUrl}/webhook/domi-bot-ask`;
 
+    console.log(n8nWebhookUrl);
     try {
       // Node.js 내장 fetch를 사용하여 n8n에 POST로 질문 토스
       const response = await fetch(n8nWebhookUrl, {
@@ -38,6 +39,7 @@ module.exports = {
         body: JSON.stringify({ prompt: prompt }),
       });
 
+      console.log("res", response);
       if (!response.ok) {
         throw new Error(`n8n 서버 응답 에러 (Status: ${response.status})`);
       }
